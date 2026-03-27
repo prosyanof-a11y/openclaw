@@ -1,0 +1,243 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                                                                              ║
+║          OPENCLAW - VISUAL SETUP GUIDE FOR RAILWAY PLATFORM                 ║
+║                                                                              ║
+║                  Установка переменных окружения шаг за шагом                ║
+║                                                                              ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+
+STEP 1: OPEN RAILWAY DASHBOARD
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+URL: https://railway.app/dashboard
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                                                           │
+│  🚂 RAILWAY DASHBOARD                                                    │
+│                                                                           │
+│  ┌─────────────────────────────────────────────────────────────────┐    │
+│  │ Your Projects                                                    │    │
+│  ├─────────────────────────────────────────────────────────────────┤    │
+│  │ [openclaw]  🟢 Active  📦 Docker                               │    │
+│  │ [other-project] 🔴 Inactive                                     │    │
+│  └─────────────────────────────────────────────────────────────────┘    │
+│                                                                           │
+│  👉 CLICK on [openclaw] ↑                                              │
+│                                                                           │
+└─────────────────────────────────────────────────────────────────────────┘
+
+
+STEP 2: NAVIGATE TO VARIABLES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+After clicking on [openclaw]:
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                                                           │
+│  🔧 OPENCLAW PROJECT PAGE                                                │
+│                                                                           │
+│  Left Menu:                          Top Tabs:                            │
+│  ├─ Dashboard                         ├─ Deployments                      │
+│  ├─ ▶️ Variables  ← CLICK HERE!       ├─ Logs                           │
+│  ├─ Settings                          └─ Metrics                         │
+│  └─ Integrations                                                           │
+│                                                                           │
+│  👉 Click on [Variables] in LEFT MENU                                   │
+│                                                                           │
+└─────────────────────────────────────────────────────────────────────────┘
+
+
+STEP 3: ADD FIRST VARIABLE (OPENROUTER_API_KEY)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+You should see the Variables page:
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                                                           │
+│  📝 ENVIRONMENT VARIABLES                                                 │
+│                                                                           │
+│  ┌─────────────────────────────────────────────────────────────────┐    │
+│  │ [+ Add Variable]  [Show Values]                                 │    │
+│  └─────────────────────────────────────────────────────────────────┘    │
+│                                                                           │
+│  👉 Click [+ Add Variable]                                              │
+│                                                                           │
+│  A form should appear:                                                    │
+│                                                                           │
+│  ┌──────────────────────────────────────────────────────┐               │
+│  │ Key                                      │ Value     │               │
+│  ├──────────────────────────────────────────┼───────────┤               │
+│  │ [OPENROUTER_API_KEY               ]      │ [sk-or-] │               │
+│  │ (type this exactly)                      │           │               │
+│  │                                          │ (paste)   │               │
+│  └──────────────────────────────────────────┴───────────┘               │
+│                                                                           │
+│  ✍️  ACTIONS:                                                             │
+│  1. Click in [Key] field                                                 │
+│  2. Type: OPENROUTER_API_KEY                                            │
+│  3. Click in [Value] field                                               │
+│  4. Paste your API key from https://openrouter.ai/keys                 │
+│  5. Press Enter or click [Save]                                          │
+│                                                                           │
+└─────────────────────────────────────────────────────────────────────────┘
+
+✅ Variable 1 added!
+
+
+STEP 4: ADD SECOND VARIABLE (TELEGRAM_BOT_TOKEN)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Repeat the same process:
+
+┌──────────────────────────────────────────────────────┐
+│ Key                        │ Value                    │
+├────────────────────────────┼──────────────────────────┤
+│ OPENROUTER_API_KEY         │ sk-or-... ✅            │
+├────────────────────────────┼──────────────────────────┤
+│ TELEGRAM_BOT_TOKEN         │ [123456:ABC...]         │
+│ (from @BotFather)          │ (paste here)            │
+└────────────────────────────┴──────────────────────────┘
+
+👉 Click [+ Add Variable] again
+1. Key: TELEGRAM_BOT_TOKEN
+2. Value: <your bot token from @BotFather>
+3. Save
+
+✅ Variable 2 added!
+
+
+STEP 5: ADD THIRD VARIABLE (OPENCLAW_GATEWAY_TOKEN)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+One more time:
+
+┌──────────────────────────────────────────────────────┐
+│ Key                        │ Value                    │
+├────────────────────────────┼──────────────────────────┤
+│ OPENROUTER_API_KEY         │ sk-or-... ✅            │
+├────────────────────────────┼──────────────────────────┤
+│ TELEGRAM_BOT_TOKEN         │ 123456:ABC... ✅        │
+├────────────────────────────┼──────────────────────────┤
+│ OPENCLAW_GATEWAY_TOKEN     │ a7f2c9e4b1d6f3a8...     │
+│                            │ (any random string)     │
+└────────────────────────────┴──────────────────────────┘
+
+👉 Click [+ Add Variable] one more time
+1. Key: OPENCLAW_GATEWAY_TOKEN
+2. Value: a7f2c9e4b1d6f3a8c5e9b2d7f4a1c8e5 (or your own)
+3. Save
+
+✅ Variable 3 added!
+
+✅ ALL 3 VARIABLES ADDED!
+
+
+STEP 6: WAIT FOR AUTO-REDEPLOY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Railway should automatically redeploy your application:
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                                                           │
+│  🔄 REDEPLOYING...                                                        │
+│                                                                           │
+│  ├─ 🟡 Building (1-2 minutes)                                           │
+│  │  └─ Compiling TypeScript                                              │
+│  │  └─ Installing dependencies                                           │
+│  │  └─ Building Docker image                                             │
+│  │                                                                        │
+│  ├─ 🟡 Starting container                                               │
+│  │                                                                        │
+│  └─ 🟢 Ready! (1-2 minutes total)                                       │
+│                                                                           │
+│  Check Deployments → Logs to see the progress                            │
+│                                                                           │
+└─────────────────────────────────────────────────────────────────────────┘
+
+
+STEP 7: VERIFY IT'S WORKING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Click on "Deployments" tab and look at the latest deployment Logs:
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│                                                                           │
+│  📋 DEPLOYMENT LOGS                                                       │
+│                                                                           │
+│  ✅ Build successful                                                     │
+│  ✅ Pushing to registry...                                               │
+│  ✅ Starting container...                                                │
+│  ✅ 🦞 OpenClaw 2026.3.26 starting...                                   │
+│  ✅ Gateway starting on ws://0.0.0.0:18789                             │
+│  ✅ Health check: OK                                                     │
+│  ✅ Listening for connections...                                         │
+│                                                                           │
+│  🎉 EVERYTHING IS WORKING!                                               │
+│                                                                           │
+└─────────────────────────────────────────────────────────────────────────┘
+
+If you see these messages ↑, congratulations! 🎊
+
+
+TROUBLESHOOTING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+❌ Still seeing "Usage: openclaw [options] [command]" ?
+
+Solution 1: Check variables are actually saved
+  → Variables tab → All 3 variables should be visible and have values
+
+Solution 2: Force redeploy
+  → Deployments → Three dots menu → "Force New Deployment"
+
+Solution 3: Check API key format
+  → OPENROUTER_API_KEY should start with "sk-or-"
+  → TELEGRAM_BOT_TOKEN should be format "123456:ABC..."
+  → No spaces before/after values!
+
+Solution 4: Wait longer
+  → Sometimes takes 2-3 minutes for variables to apply
+  → Wait 5 minutes total before troubleshooting
+
+Solution 5: Check Logs
+  → Deployments → Logs
+  → Search for "Error" or "FATAL"
+  → Read the error message
+
+
+SUCCESS CHECKLIST ✅
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+☑️ All 3 variables added to Railway
+☑️ No spaces in variable values
+☑️ Application redeployed automatically
+☑️ Logs show "Gateway starting" message
+☑️ No "Usage:" message in logs
+
+✅ DONE! Your OpenClaw is ready to use! 🚀
+
+
+WHAT'S NEXT?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Test API:
+   curl https://your-app.up.railway.app/healthz
+
+2. Set Telegram Webhook:
+   @BotFather → /setwebhook
+   https://your-app.up.railway.app/telegram/webhook
+
+3. Start using:
+   WebSocket: wss://your-app.up.railway.app
+   REST API: https://your-app.up.railway.app/api/
+
+
+═══════════════════════════════════════════════════════════════════════════════
+                                                                                 
+                   🎉 CONGRATULATIONS! YOU'RE ALL SET! 🎉
+
+                     OpenClaw is now running on Railway!
+                      Ready to process multi-channel AI!
+
+═══════════════════════════════════════════════════════════════════════════════
