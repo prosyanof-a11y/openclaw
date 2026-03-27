@@ -55,7 +55,7 @@ runs:
       if: inputs.use-sticky-disk == 'true' && github.event_name != 'pull_request'
       uses: useblacksmith/stickydisk@v1
       with:
-        key: ${{ github.repository }}-pnpm-store-${{ runner.os }}-${{ github.ref_name }}-${{ inputs.cache-key-suffix }}-${{ hashFiles('pnpm-lock.yaml') }}
+        key: pnpm-${{ github.repository }}-${{ runner.os }}-${{ github.ref_name || 'main' }}-${{ inputs.cache-key-suffix }}-${{ hashFiles('pnpm-lock.yaml') }}
         path: ${{ steps.pnpm-store.outputs.path }}
 
     - name: Restore pnpm store cache (exact key only)
